@@ -6,22 +6,22 @@ class Symbol:
     # declaring class variables
     symbol = ''
     default_symbols = ['X', 'O']
-    selected_symbol = list()
+    selected_symbols = list()
 
     # constructor: takes valid symbol from player
-    def __init__(self, symbol_index, player_name):
+    def __init__(self, symbol_index, player_name, selected_symbols):
         is_valid = False
         symbol = ''
-        selected_symbol = list()
         while not is_valid:
             symbol = input('Enter your preferred symbol ({0}): '.format(player_name))
             if not symbol:
                 symbol = self.default_symbols[symbol_index]
+            print(symbol, selected_symbols)
             if len(symbol) == 1:
-                if symbol not in selected_symbol:
+                if symbol not in selected_symbols:
                     self.set_symbol(symbol)
-                    selected_symbol.append(symbol)
-                    self.set_selected_symbol(selected_symbol)
+                    selected_symbols.append(symbol)
+                    self.set_selected_symbols(selected_symbols)
                     is_valid = True
                 else:
                     print('This symbol is already taken. Please enter another character.')
@@ -36,10 +36,10 @@ class Symbol:
     def set_symbol(self, symbol):
         self.symbol = symbol
 
-    # getter method to return selected_symbol from class variable
-    def get_selected_symbol(self):
-        return self.selected_symbol
+    # getter method to return selected_symbols from class variable
+    def get_selected_symbols(self):
+        return self.selected_symbols
 
-    # setter method to set selected_symbol in class variable
-    def set_selected_symbol(self, selected_symbol):
-        self.selected_symbol = selected_symbol
+    # setter method to set selected_symbols in class variable
+    def set_selected_symbols(self, selected_symbols):
+        self.selected_symbols = selected_symbols

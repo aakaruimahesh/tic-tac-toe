@@ -39,10 +39,11 @@ class StartGame:
     # method to start the game
     def run(self):
         players = dict()
+        symbol_list = list()
         for i in range(PLAYER_SIZE):
             player = Player(i + 1)
             player_name = player.get_name()
-            symbol = Symbol(i, player_name)
+            symbol = Symbol(i, player_name, symbol_list)
             print('Hello {0}, your symbol is "{1}"'.format(player_name, symbol.get_symbol()))
             players[symbol] = player
 
