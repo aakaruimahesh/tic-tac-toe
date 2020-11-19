@@ -13,7 +13,9 @@ class Board:
     board = list()                                  # board game list for indexing position based on size
 
     # constructor
-    def __init__(self):
+    def __init__(self, row_size=ROW_SIZE):
+        self.row_size = row_size                    # dynamic board size
+        self.total_blocks = row_size * row_size
         self.display_manual()                       # Displaying manual while initializing the class
 
     # getter method to return the board list from class variable
