@@ -16,7 +16,6 @@ class Symbol:
             symbol = input('Enter your preferred symbol ({0}): '.format(player_name))
             if not symbol:
                 symbol = self.default_symbols[symbol_index]
-            print(symbol, selected_symbols)
             if len(symbol) == 1:
                 if symbol not in selected_symbols:
                     self.set_symbol(symbol)
