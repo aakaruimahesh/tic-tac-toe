@@ -1,10 +1,12 @@
-from board import Board
-from player import Player
+from start_game import StartGame
 
 
 if __name__ == "__main__":
-    board = Board()
-    player1 = Player(1)
-    print(player1.name)
-    player2 = Player(2)
-    print(player2.name)
+    keep_playing = True
+    while keep_playing:
+        start_game = StartGame()
+        start_game.run()
+
+        play_again = input('Do you want to play new game again? (Y / N or any key to exit): ')
+        if play_again.lower() != 'y':
+            keep_playing = False

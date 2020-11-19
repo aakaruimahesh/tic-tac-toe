@@ -1,5 +1,5 @@
 '''
-Every constant variable is placed in this file.
+Every constant variable is declared in this file.
 '''
 
 ## This is size of game in a each row.
