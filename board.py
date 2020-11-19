@@ -101,12 +101,12 @@ class Board:
         return status
 
     # methos to check if the player won the game
-    def check_winner(self, turn):
+    def check_winner(self, turn, player):
         row_size = self.row_size
         board = np.reshape(self.get_board(), (-1, row_size))            # converting into 2D array
         mask = board == turn                                            # masking turn value into boolean
         is_winner = mask.all(0).any() | mask.all(1).any()               # checks horizontal and vertical win case
         is_winner |= np.diag(mask).all() | np.diag(mask[:,::-1]).all()  # checks diagonal win case
         if is_winner:
-            return turn
+            return player
         return None # No winner
