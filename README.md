@@ -1,7 +1,5 @@
 # tic-tac-toe
 
-[![Tic-Tac-Toe compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/aakaruimahesh/tic-tac-toe)
-
 A simple terminal based tic-tac-toe game of 3X3 board size.
 Supported for python3.3 or above
 
