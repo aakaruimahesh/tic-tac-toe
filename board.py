@@ -46,7 +46,7 @@ class Board:
 
         for i in range(self.total_blocks):
             key = i + 1
-            board.append(' ' if key < 10 else '  ')
+            board.append(' ')
         return board
 
     #  generates the border to display in each row of game display
@@ -72,12 +72,12 @@ class Board:
         display_string = ''                         # board UI
         for i, value in enumerate(board):
             key = i + 1
-            data = value if auto_fill == False else key
+            data = value if auto_fill == False else str(key)
             if key % row_size != 0:
-                block = ' {0} |' if key < 10 else '{0} |'
+                block = '{0} |' if key > 9 and len(data.strip()) > 1 else ' {0} |'
                 display_string += block.format(data)
             else:
-                block = ' {0} ' if key < 10 else '{0} '
+                block = '{0} ' if key > 9 and len(data.strip()) > 1 else ' {0} '
                 display_string += block.format(data) + '\n'
                 if key != total_blocks:
                     display_string += '{0}\n'.format(border_line)
