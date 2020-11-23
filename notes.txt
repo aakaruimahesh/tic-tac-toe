@@ -1,0 +1,14 @@
+1. prompt user to input play locally or over the network
+2. if the user selects the locally the game will run as it is.
+3. if the user selects over the network
+  3.1. show the network detail to user (localhost)
+  3.2. followed by name and symbol of player
+the person who will be join first will be player 1
+the player will then wait for another play to join
+network detail: localhost:8080
+
+
+player 2:
+1. player starts the game with "joingame" argument
+2. player will enter the network detail and join the Game
+3. followed by name and symbol of player
